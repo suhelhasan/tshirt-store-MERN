@@ -84,6 +84,7 @@ function UpdateCategory({ match }) {
   };
   useEffect(() => {
     preload(match.params.categoryId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <Base

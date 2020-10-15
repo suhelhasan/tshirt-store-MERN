@@ -26,13 +26,9 @@ function AddProduct() {
     description,
     price,
     stock,
-    photo,
     categories,
-    category,
-    loading,
     error,
     createdProduct,
-    getRedirect,
     formData,
   } = values;
 
@@ -49,6 +45,7 @@ function AddProduct() {
   };
   useEffect(() => {
     preload();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const onSubmit = (event) => {
     event.preventDefault();

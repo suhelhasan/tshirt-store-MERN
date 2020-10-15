@@ -30,13 +30,9 @@ function UpdateProduct({ match }) {
     description,
     price,
     stock,
-    photo,
     categories,
-    category,
-    loading,
     error,
     createdProduct,
-    getRedirect,
     formData,
   } = values;
 
@@ -71,6 +67,7 @@ function UpdateProduct({ match }) {
   };
   useEffect(() => {
     preload(match.params.productId);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onSubmit = (event) => {

@@ -16,27 +16,25 @@ export default function Cart() {
   const loadAllProducts = () => {
     return (
       <div>
-        <h1>This is load Product</h1>
-        {products.map((product, index) => (
-          <Card
-            key={index}
-            product={product}
-            removeFromCart={true}
-            addtoCart={false}
-            setReload={setReload}
-            reload={reload}
-          />
-        ))}
+        <h1>Products</h1>
+        {products ? (
+          products.map((product, index) => (
+            <Card
+              key={index}
+              product={product}
+              removeFromCart={true}
+              addtoCart={false}
+              setReload={setReload}
+              reload={reload}
+            />
+          ))
+        ) : (
+          <h3>Cart is empty</h3>
+        )}
       </div>
     );
   };
-  // const loadCheckout = () => {
-  //   return (
-  //     <div>
-  //       <h1>This is for checkout</h1>
-  //     </div>
-  //   );
-  // };
+
   return (
     <Base title="Cart page" description="Ready to checkout">
       <div className="row text-center">
