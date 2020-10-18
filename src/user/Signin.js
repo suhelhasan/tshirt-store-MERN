@@ -5,8 +5,8 @@ import { signin, authenticate, isAuthenticated } from "../auth/helper";
 
 function Signin() {
   const [values, setValues] = useState({
-    email: "hello@gmail.com",
-    password: "0123",
+    email: "suhel@gmail.com",
+    password: "1234",
     error: "",
     loading: false,
     didRedireact: false,
@@ -65,7 +65,7 @@ function Signin() {
   };
   const signinForm = () => {
     return (
-      <div className="row" style={{ border: "1px solid red" }}>
+      <div className="row">
         <div className="col-md-6 offset-sm-3 text-left">
           <form>
             <div className="form-group">
